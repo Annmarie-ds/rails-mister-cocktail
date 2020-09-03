@@ -1,1 +1,19 @@
 // Specific CSS for your home-page
+body {
+  background: #F4EAE1;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card-category {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+}
