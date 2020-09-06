@@ -1,19 +1,30 @@
 // Specific CSS for your home-page
 body {
-  background-color: #FAF8F1;
+  background-color: #fff1e6;
 }
 
 h1 {
   font-weight: 700;
   text-align: center;
   font-size: 60px;
+  color: #fff1e6;
 }
 
-.card {
-  margin: 20px;
-  border-radius: 20px;
-  background-color: #FFFFFF;
-  width: 100px;
+h2 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 40px;
+  color: #a5a58d;
+}
+
+.card a {
+  font-size:20px;
+  color: #cb997e;
+}
+
+.card a.hover {
+  color: #ddbea9;
 }
 
 .banner {
@@ -22,21 +33,50 @@ h1 {
   padding: 150px 0;
 }
 
-.banner h1 {
-  margin: 0;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
-  font-weight: bold;
+.container {
+  width: 900px;
+  margin: auto;
 }
 
-.banner p {
-  font-size: 20px;
-  color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+.text-center {
+  text-align: center;
 }
 
+.cards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
 
+.card {
+  width: 140px;
+  height: 60px;
+  vertical-align: center;
+  border-radius: 50px;
+  box-shadow: 0 0 5px rgb(230,230,230);
+  text-align: center;
+  padding: 15px;
+  border: 5px solid #ddbea9;
+}
 
+.link-container {
+  width: 900px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
 
+.new-link {
+  color: #a5a58d;
+  width: 200px;
+  height: 60px;
+  text-align: center;
+  padding: 15px;
+  border-bottom: 1px solid #ddbea9;
+  border-top: 1px solid #ddbea9;
+}
+
+.new-link a {
+  color: #a5a58d;
+  font-size:20px;
+}
