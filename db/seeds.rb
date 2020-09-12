@@ -18,7 +18,7 @@ Ingredient.create(name: 'Salt')
 
 puts 'Cleaning data...'
 
-puts 'Creating 4 cocktails...'
+puts 'Creating 6 cocktails...'
 
 Cocktail.destroy_all
 # Cocktail.create(name: 'Mojito')
@@ -46,3 +46,12 @@ cocktail4 = Cocktail.new(name: 'Blue Lagoon')
 cocktail4.photo.attach(io: file, filename: 'blue_lagoon.png', content_type: 'image/png')
 cocktail4.save
 
+file = URI.open('https://res.cloudinary.com/dfiqhpsxy/image/upload/v1599907592/Pina_Colada.jpg')
+cocktail5 = Cocktail.new(name: 'Pina Colada')
+cocktail5.photo.attach(io: file, filename: 'pina_colada.png', content_type: 'image/png')
+cocktail5.save
+
+file = URI.open('https://res.cloudinary.com/dfiqhpsxy/image/upload/v1599907592/tequila_sunrise.jpg')
+cocktail6 = Cocktail.new(name: 'Tequila Sunrise')
+cocktail6.photo.attach(io: file, filename: 'tequila_sunrise.png', content_type: 'image/png')
+cocktail6.save
