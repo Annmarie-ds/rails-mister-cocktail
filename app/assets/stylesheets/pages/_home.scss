@@ -18,15 +18,6 @@ h2 {
   color: #a5a58d;
 }
 
-.card a {
-  font-size:20px;
-  color: #cb997e;
-}
-
-.card a.hover {
-  color: #ddbea9;
-}
-
 .banner {
   background-size: cover;
   background-position: center;
@@ -36,27 +27,62 @@ h2 {
 .container {
   width: 900px;
   margin: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .text-center {
   text-align: center;
 }
 
+//card
+
 .cards {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
 }
 
-.card {
-  width: 140px;
-  height: 60px;
-  vertical-align: center;
-  border-radius: 50px;
+.card-category {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
   box-shadow: 0 0 5px rgb(230,230,230);
   text-align: center;
   padding: 15px;
-  border: 5px solid #ddbea9;
+  border: 2px solid #ddbea9;
+}
+
+// .card-category p {
+//   font-size: 20px;
+//   font-weight: 600;
+//   color: #cb997e;
+// }
+
+// .card-category p.hover {
+//   color: #ddbea9;
+// }
+
+.btn-ghost {
+  color: #FFFFFF;
+  border: 3px solid #FFFFFF;
+  opacity: 1;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: 800;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  position: center;
+}
+
+.btn-ghost:hover {
+  opacity: 0.8;
+  color: #FFFFFF;
+  border: 3px solid #FFFFFF;
+  background-color: #B3AFAD;
 }
 
 .link-container {
@@ -66,17 +92,51 @@ h2 {
   justify-content: center;
 }
 
-.new-link {
-  color: #a5a58d;
-  width: 200px;
-  height: 60px;
+//new link
+
+.button {
+  color: #CCCCCC;
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
   text-align: center;
-  padding: 15px;
-  border-bottom: 1px solid #ddbea9;
-  border-top: 1px solid #ddbea9;
+  border-radius: 50%;
+  border: none;
+  margin-bottom: 15px;
+  background-color: #a5a58d;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
 }
 
-.new-link a {
-  color: #a5a58d;
-  font-size:20px;
+.button a {
+  color: #FFFFFF;
+  text-decoration: none;
 }
+
+//footer
+
+.footer {
+  border-top: 1px solid #ddbea9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0px 50px;
+  color: rgba(0,0,0,0.3);
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: black;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
+}
+

@@ -4,17 +4,29 @@
   </div>
 </div>
 
-<div class="container">
 <h2 class="text-center">Our Cocktails</h2>
-<div class="cards">
-  <% @cocktails.each do |cocktail| %>
-    <div class = "card"><p><%= link_to cocktail.name, cocktail_path(cocktail) %></p></div>
-  <% end %>
+<div class="container">
+  <div class="cards">
+    <% @cocktails.each do |cocktail| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path cocktail.photo.key, height: 200, width: 200, crop: :fill %>')">
+      <p><%= link_to cocktail.name, cocktail_path(cocktail), class: "btn btn-ghost" %></p>
+    </div>
+     <% end %>
   </div>
 </div>
 
 <div class="link-container">
-<p class="new-link"><i class="fas fa-plus"></i> <%= link_to 'New Cocktail', new_cocktail_path%></p>
+  <button class="button"><%= link_to '+', new_cocktail_path%></button>
 </div>
 
+<!-- <i class="fas fa-plus"></i> -->
 
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+</div>
