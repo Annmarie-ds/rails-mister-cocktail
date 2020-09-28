@@ -1,13 +1,13 @@
 // Specific CSS for your home-page
 body {
-  background-color: #fff1e6;
+  background-color: white;
 }
 
 h1 {
   font-weight: 700;
   text-align: center;
   font-size: 60px;
-  color: #fff1e6;
+  color: white;
 }
 
 h2 {
@@ -15,88 +15,59 @@ h2 {
   margin-bottom: 15px;
   font-weight: 600;
   font-size: 40px;
-  color: #a5a58d;
+  color: white;
+  opacity: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .banner {
-  background-size: contain;
+  background-size: cover;
   background-position: center;
+  height: 400px;
   padding: 150px 0;
-}
-
-.container {
-  width: 1000px;
-  margin: auto;
-  display: flex;
-  justify-content: center;
+  border: 15px solid white;
 }
 
 .text-center {
   text-align: center;
+  color: #5F5F5F;
 }
 
 //card
 
-.cards {
+.card-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 5px;
+  justify-items: center;
+  margin-left: 200px;
+  margin-right: 200px;
 }
 
-.card {
-  width: 150px;
-  height: 300px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
-
-
-.card-category {
+.home-card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  height: 200px;
   width: 200px;
-  height: 300px;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  text-align: center;
-  padding: 15px;
-  border: 2px solid #ddbea9;
+  margin: 5px;
+
+  img{
+  opacity: 0.7;
+  }
+
 }
 
-// .card-category p {
-//   font-size: 20px;
-//   font-weight: 600;
-//   color: #cb997e;
-// }
-
-// .card-category p.hover {
-//   color: #ddbea9;
-// }
-
-.btn-ghost {
-  color: #FFFFFF;
-  border: 3px solid #FFFFFF;
-  opacity: 1;
-  padding: 8px 24px;
-  border-radius: 50px;
-  font-weight: 800;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-  position: center;
+/* On mouse-over, add a deeper shadow */
+.home-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-.btn-ghost:hover {
-  opacity: 0.8;
-  color: grey;
-  border: 3px solid grey;
-  background-color: #fff1e6;
+/* Add some padding inside the card container */
+.home-card-container {
+  padding: 2px 16px;
 }
 
 .link-container {
@@ -127,31 +98,5 @@ h2 {
 .button a {
   color: #FFFFFF;
   text-decoration: none;
-}
-
-//footer
-
-.footer {
-  border-top: 1px solid #ddbea9;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100px;
-  padding: 0px 50px;
-  color: rgba(0,0,0,0.3);
-}
-.footer-links {
-  display: flex;
-  align-items: center;
-}
-.footer-links a {
-  color: black;
-  opacity: 0.15;
-  text-decoration: none;
-  font-size: 24px;
-  padding: 0px 10px;
-}
-.footer-links a:hover {
-  opacity: 1;
 }
 

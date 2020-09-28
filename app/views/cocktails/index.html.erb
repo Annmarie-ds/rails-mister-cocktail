@@ -1,32 +1,45 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(https://res.cloudinary.com/dfiqhpsxy/image/upload/v1599382661/obc4vyxwdqfcn6ut5lqm.jpg)">
-  <div class="banner-container">
-  <h1>Mister Cocktail</h1>
-  </div>
-</div>
-
-<h2 class="text-center">Our Cocktails</h2>
-<div class="container">
-  <div class="cards">
-    <% @cocktails.each do |cocktail| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path cocktail.photo.key, height: 200, width: 200, crop: :fill %>')">
-      <p><%= link_to cocktail.name, cocktail_path(cocktail), class: "btn btn-ghost" %></p>
+<div class="home-container">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1434817247550-689f7c23be58?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1706&q=80)">
+    <div class="topnav">
+      <a class="home active" href="#home">HOME</a>
+      <a class="contact" href="#contact">CONTACT</a>
+      <a class="about" href="#about">ABOUT</a>
     </div>
-     <% end %>
+
+    <div class="banner-container">
+    <h2>MISTER COCKTAIL</h2>
+    </div>
   </div>
-</div>
 
-<div class="link-container">
-  <button class="button"><%= link_to '+', new_cocktail_path%></button>
-</div>
+  <h3 class="text-center m-3"><b>COCKTAILS</b></h3>
+ <div class="card-container">
+    <% @cocktails.each do |cocktail| %>
+      <%= link_to cocktail_path(cocktail) do %>
+        <div class="home-card">
+          <%= cl_image_tag cocktail.photo.key, height: 150, width: 200, crop: :fill %>
+          <div class="home-card-container">
+            <h6><b><%= cocktail.name %></b></h6>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 
-<!-- <i class="fas fa-plus"></i> -->
+  <div class="link-container">
+    <%= link_to new_cocktail_path do %>
+    <i class="fas fa-plus p-5"></i>
+    <% end %>
+  </div>
 
-<div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
+  <!-- <i class="fas fa-plus"></i> -->
+
+  <div class="footer">
+    <div class="footer-links">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
   </div>
 </div>
