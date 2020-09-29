@@ -1,5 +1,20 @@
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-    <%= f.association :ingredient %>
-    <%= f.input :description %>
-    <%= f.submit %>
-<% end %>
+<div class="page-container">
+  <div class="form-container">
+    <div class="form-content">
+      <div class="form-input">
+        <h4>Add a new dose here!</h4>
+          <%= simple_form_for [@cocktail, @dose] do |f| %>
+              <%= f.association :ingredient %>
+              <%= f.input :description %>
+              <%= f.submit %>
+          <% end %>
+          <br>
+          <%= link_to 'Back', cocktail_path(@cocktail) %>
+        </div>
+
+        <div class="form-image">
+          <img src="https://www.flaticon.com/svg/static/icons/svg/493/493469.svg" alt="cocktails">
+        </div>
+    </div>
+  </div>
+</div>

@@ -1,24 +1,57 @@
-.card {
-  width: 500px;
-  height: 700px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+.container {
+  top: 200px;
   background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
+  width: 100%;
+  height: 350px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  -webkit-box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+
+  .row{
+    display: inline-flex;
+
+    img{
+      margin: 25px;
+      display: flex;
+      align-content: center;
+    }
+  }
+
+  .cocktail-card {
+    width: 60%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    .cocktail-body {
+      width: 100%;
+      margin: 25px 100px;
+    }
+
+    .title {
+      color: #5f5f5f;
+    }
+
+    .description {
+      font-style: italic;
+      color: #5f5f5f;
+      text-align: justify;
+    }
+
+    a {
+      float: right;
+      color: #5f5f5f;
+      text-align: center;
+      padding: 2px 5px;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    a:hover {
+      border-bottom: 1px solid #5f5f5f;
+      color: #5f5f5f !important;
+    }
+  }
 }
 
-.card img {
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-}
-
-.card-body {
-  width: 450px;
-}
-
-.title {
-  text-align: left;
-}

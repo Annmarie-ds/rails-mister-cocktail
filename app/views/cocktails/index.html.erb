@@ -1,5 +1,5 @@
 <div class="home-container">
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1434817247550-689f7c23be58?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1706&q=80)">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1434817247550-689f7c23be58?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1706&q=80)">
     <div class="topnav">
       <a class="home active" href="#home">HOME</a>
       <a class="contact" href="#contact">CONTACT</a>
@@ -25,16 +25,27 @@
     <% end %>
   </div>
 
-  <div class="link-container">
-    <%= link_to new_cocktail_path do %>
-    <i class="fas fa-plus p-5"></i>
-    <% end %>
+  <div class="col text-center p-4">
+    <button type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-md"><i class="fas fa-plus"></i></button>
   </div>
+
+  <div class="modal fade bd-example-modal-md" tabindex="-1" role="dialog" aria-labelledby="myMediumModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content p-4">
+        <%= simple_form_for [ Cocktail.new ] do |f| %>
+          <%= f.input :name %>
+          <%= f.input :photo, as: :file %>
+          <%= f.submit "Add", class: "btn btn-outline-dark" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
 
   <!-- <i class="fas fa-plus"></i> -->
 
   <div class="footer">
-    <div class="footer-links">
+    <div class="footer-links text-align-center">
       <a href="#"><i class="fab fa-github"></i></a>
       <a href="#"><i class="fab fa-instagram"></i></a>
       <a href="#"><i class="fab fa-facebook"></i></a>
@@ -43,3 +54,4 @@
     </div>
   </div>
 </div>
+
